@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Plugins.BatteryPage"
+             Title="Battery">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Level ?" Grid.Row="0" Grid.Column="0"></Label>
+            <Label x:Name="level" Grid.Row="0" Grid.Column="1"></Label>
+            <Label Text="Status ?" Grid.Row="1" Grid.Column="0"></Label>
+            <Label x:Name="status" Grid.Row="1" Grid.Column="1"></Label>
+            <Label Text="ChargeType ?" Grid.Row="2" Grid.Column="0"></Label>
+            <Label x:Name="chargeType" Grid.Row="2" Grid.Column="1"></Label>
+            <Label Text="IsLow ?" Grid.Row="3" Grid.Column="0"></Label>
+            <Label x:Name="isLow" Grid.Row="3" Grid.Column="1"></Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage> 

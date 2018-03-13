@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:plugins="clr-namespace:Plugins;assembly=Plugins"
+             x:Class="Plugins.MenuPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu"
+                 BackgroundColor="#e8e8e8">
+
+            <StackLayout Orientation="Vertical">
+
+           
+                <StackLayout BackgroundColor="#2196F3"
+                     HeightRequest="75">
+
+                    <Label Text="Menu"
+                 FontSize="20"
+                 VerticalOptions="CenterAndExpand"
+                 TextColor="White"
+                 HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <ListView x:Name="listView"
+                  RowHeight="65"
+                  SeparatorVisibility="Default"
+                  BackgroundColor="#e8e8e8"
+                 ItemSelected="MenuItemSelected">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                  
+                                    <Image Source="{Binding IconSource}"
+                         WidthRequest="40"
+                         Grid.Row="0"
+                         Grid.Column="0"
+                         HeightRequest="40"
+                         VerticalOptions="Center" />
+
+                                    <Label Text="{Binding Title}"
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         FontSize="Medium"
+                         VerticalOptions="Center"
+                         TextColor="Black"/>
+          
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+             <x:Arguments>
+       <plugins:BatteryPage />
+      </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
